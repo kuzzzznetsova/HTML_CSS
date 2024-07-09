@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Моя первая веб-страница</title>
+    <link rel="stylesheet" href="main.css">
+     <script type="text/javascript">
+        function checkAnswers(){
+            var userAnswer = document.getElementById("userAnswer1").value;
+            var score = 0;
+            userAnswer = userAnswer.toLocaleLowerCase();
+                if(userAnswer == "сон" || userAnswer == "сноведение"){
+                    score++; 
+                }
+            var userAnswer = document.getElementById("userAnswer2").value;
+            userAnswer = userAnswer.toLocaleLowerCase();
+                if(userAnswer == "лестнице" || userAnswer == "по лестнице" || userAnswer== "лестница"){
+                    score++; 
+                }
+            var userAnswer = document.getElementById("userAnswer3").value;
+            userAnswer = userAnswer.toLocaleLowerCase();
+                if(userAnswer == "в словаре" || userAnswer == "словарь") {
+                    score++; 
+                }
+            
+            alert("Всего отгадано: " + score);
+            
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="index1.html"> Главная </a>
+        <a href="#"> Игра в загадки </a>
+        <a href="guess.html"> Угадайка </a>
+    </div>
+
+    <h1>Игра в загадки</h1>
+    
+    <div class="box">
+        <p> Что можно увидеть с закрытыми глазами? </p>
+        <input type="text" id="userAnswer1">
+        <p> По чему ходят часто, а ездят редко? </p>
+        <input type="text" id="userAnswer2">
+        <p> Где вторник идёт раньше, чем понедельник? </p>
+        <input type="text" id="userAnswer3">
+        <br> <br> <br>
+        <a href="#" onClick="checkAnswers();" ><b>Ответить</b></a> 
+        
+    </div>
+<br>
+
+
+        <div class="footer">
+            <a href="index1.html"> Главная </a>
+            <a href="#"> Игра в загадки </a>
+            <a href="guess.html"> Угадайка </a>
+
+            <br><br>
+            CopyRight &copy; Darina Kuznetsova
+        </div>
+
+</body>
+
+</html>

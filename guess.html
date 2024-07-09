@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Моя первая веб-страница</title>
+<link rel="stylesheet" href="main.css">
+<script type="text/javascript">
+    
+    function guess() {
+        var answer = parseInt(Math.random() * 100);
+        var userAnswer = + prompt ("Угадайте число от 0 до 100");
+        var maxTryCount = 5;
+        
+        for (var tryCount = 1; tryCount < maxTryCount; tryCount++) {
+                if(userAnswer == answer) {
+                    alert("Поздравляю, вы угадали!");
+                    break;
+                } else if (userAnswer > answer) {
+                    alert("Вы ввели слишком большое число.");
+                } else if (userAnswer < answer) {
+                    alert("Вы ввели слишком маленькое число.");
+                }
+                userAnswer = +prompt ("Попробуйте ещё раз. Введите число от 1 до 100\n У вас осталлось " + (maxTryCount - tryCount) + " попыток");
+        }
+        if (tryCount == maxTryCount) {
+            alert("Вы проиграли!");
+        }
+        alert("Правильный ответ: " + answer);
+    }
+    </script>
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="index1.html"> Главная </a>
+        <a href="pz.html"> Игра в загадки </a>
+        <a href="guess.html"> Угадайка </a>
+    </div>
+    
+       <h1>Игра Угадайка</h1>
+     <div class="box">
+        <a href="#" onclick="guess();">Начать</a>
+    </div>
+    <br>
+    <br>
+
+ 
+
+        <div class="footer">
+            <a href="index1.html"> Главная </a>
+            <a href="pz.html"> Игра в загадки </a>
+            <a href="guess.html"> Угадайка </a>
+
+            <br><br>
+            CopyRight &copy; Darina Kuznetsova
+        </div>
+
+</body>
+
+</html>
